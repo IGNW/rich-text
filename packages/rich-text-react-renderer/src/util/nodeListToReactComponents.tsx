@@ -14,6 +14,10 @@ export function nodeListToReactComponents(nodes: CommonNode[], options: Options)
 export function nodeToReactComponent(node: CommonNode, options: Options): ReactNode {
   const { renderNode, renderMark, renderText } = options;
   if (helpers.isText(node)) {
+    if (!node.marks) {
+      node.marks = [];
+    }
+
     return node.marks.reduce((value: ReactNode, mark: Mark): ReactNode => {
       if (!renderMark[mark.type]) {
         return value;

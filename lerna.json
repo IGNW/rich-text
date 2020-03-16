@@ -2,13 +2,7 @@
   "lerna": "2.7.2",
   "version": "14.1.0",
   "packages": [
-    "packages/contentful-slatejs-adapter",
-    "packages/rich-text-from-markdown",
-    "packages/rich-text-html-renderer",
-    "packages/rich-text-links",
-    "packages/rich-text-plain-text-renderer",
-    "packages/rich-text-react-renderer",
-    "packages/rich-text-types"
+    "packages/rich-text-react-renderer"    
   ],
   "command": {
     "bootstrap": {
