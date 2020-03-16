@@ -214,3 +214,25 @@ const options = {
   },
 };
 ```
+
+#### Fix render bug with text node
+
+Bug: Contentful returns node with no marks on hyperlink. This breaks the render component.
+
+```
+{
+  "value": null,
+  "nodeType": "hyperlink",
+  "marks": null,
+  "data": {
+    "uri": "https:somewhere.com/"    
+  },
+  "content": [
+    {
+      "nodeType": "text",
+      "value": "the link text",
+      "content": null
+    }
+  ]
+},
+```
